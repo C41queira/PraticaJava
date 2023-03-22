@@ -1,7 +1,7 @@
 package br.com.contractworked.entites;
 
-import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Contract {
@@ -9,12 +9,16 @@ public class Contract {
     private double valueHour; 
     private int worksHour; 
 
-    DateFormat f = DateFormat.getInstance();
+    //Implementada para formatar a data do contrato 
+    SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 
     public Contract(){}
 
+    //Construtor instanciado para já implementar todas as variaveis 
     public Contract(String date, double valueHour, int worksHour) throws ParseException{
+        //Converte a String do construtor para uma data certa no contrato 
         this.date = f.parse(date);
+
         this.valueHour = valueHour;
         this.worksHour = worksHour;
     }
