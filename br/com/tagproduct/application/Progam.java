@@ -64,6 +64,8 @@ public class Progam {
 
         }
 
+        s.close();
+
         for (Product product : products) {
            System.out.println(product.priceTag()); 
         }

@@ -52,6 +52,8 @@ public class Progam {
             }
         }
 
+        scan.close();
+
         //Reaçizar a soma de todos os impostos 
         for (TaxPayer taxPayer : taxPayers) {
             soma += taxPayer.taxcalculation(); 
